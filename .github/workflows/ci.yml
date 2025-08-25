@@ -1,4 +1,4 @@
-name: CI/CD
+name: Build and Test
 
 on:
   push:
@@ -10,30 +10,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [16.x, 18.x]
-
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v4
     
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: '18'
         cache: 'npm'
     
     - name: Install dependencies
-      run: npm ci
+      run: npm install
     
     - name: Run tests
-      run: npm test -- --watchAll=false --coverage --passWithNoTests
+      run: npm test -- --watchAll=false --passWithNoTests
     
     - name: Build project
       run: npm run build
-    
-    - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: build-files
-        path: build/
