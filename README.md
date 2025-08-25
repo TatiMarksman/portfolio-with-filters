@@ -2,24 +2,42 @@
 
 ![Build Status](https://github.com/TatiMarksman/portfolio-with-filters/workflows/Build/badge.svg)
 
-This is a simple React project built as part of the **Events & States** homework.  
-The app demonstrates how to use **state** and **events** in React to filter items.
+A simple React portfolio project with filtering functionality built as part of the **Events & States** homework.
 
-## 📌 Features
+## What's included
+
+### Portfolio Gallery
 - Filter portfolio items by category (`All`, `Websites`, `Flayers`, `Business Cards`)
 - Dynamic rendering of items based on the selected filter
-- All styles are included in `App.css`
+- Responsive design with modern UI
+- Interactive filter buttons with active state
 
-## 🛠️ Technologies
+### Features
+- State management with React hooks
+- Event handling for filter selection
+- Component-based architecture
+- CSS styling with flexbox layout
+
+## How to run
+
+```bash
+npm install
+npm start
+```
+
+Then open [http://localhost:3000](http://localhost:3000) to view the portfolio.
+
+## Build
+
+```bash
+npm run build
+```
+
+## Technologies Used
 - React (Create React App)
 - JavaScript (ES6+)
 - CSS (App.css)
 
-## 🚀 Getting Started
+## About
 
-Clone the repository:
-
-```bash
-git clone https://github.com/TatiMarksman/portfolio-with-filters.git
-cd portfolio-with-filters
-```
+This project demonstrates how to use **state** and **events** in React to create an interactive filtering system for a portfolio gallery.
